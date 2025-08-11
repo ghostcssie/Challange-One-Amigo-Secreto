@@ -3,7 +3,7 @@
 // Lista de amigos (começa com o que tiver salvo no localStorage)
 let amigos = JSON.parse(localStorage.getItem("amigos")) || [];
 
-// Atualiza a lista assim que a página carrega
+
 atualizarLista();
 
 function adicionarAmigo() {
@@ -19,8 +19,8 @@ function adicionarAmigo() {
     salvarNoLocalStorage();
     atualizarLista();
 
-    input.value = ""; // limpa o campo
-    input.focus(); // coloca o cursor de volta no campo
+    input.value = ""; 
+    input.focus(); 
 }
 
 function atualizarLista() {
@@ -60,3 +60,4 @@ function sortearAmigo() {
 function salvarNoLocalStorage() {
     localStorage.setItem("amigos", JSON.stringify(amigos));
 }
+
